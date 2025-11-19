@@ -1,0 +1,42 @@
+@model proyecto_caldas.Models.Usuariomodel
+
+<div class="contrainer text-center w-75">
+  <h1>Registrarse</h1>
+  <form asp-action="Register" asp-controller="Usuario" method="post">
+    <div class="from-group">
+      <label for="usuario_Nombre">Nombre</label>
+      <input type="text" class="form-control" id="Usuario_Nombre" name="Usuario_Nombre" asp-for="Usuario_Nombre"
+        required />
+      <span asp-validation-for="Usuario_Nombre" class="text-danger"></span>
+
+    </div>
+    <div class="from-group">
+      <label for="Usuario_apellido">Apellido</label>
+      <input type="text" class="form-control" id="Usuario_Apellido" name="Usuario_Apellido" asp-for="Usuario_Apellido"
+        required />
+      <span asp-validation-for="Usuario_Apellido" class="text-danger"></span>
+
+    </div>
+    <div class="form group">
+      <label for="Usuario_Correo">Correo</label>
+      <input type="email" class="form-control" id="Usuario_Correo" name="Usuario_Correo" asp-for="Usuario_Correo"
+        required />
+      <span asp-validation-for="Usuario_Correo" class="text-danger"></span>
+      <div class="from group">
+        <label for="Usuario_Contrasena">Contrasena</label>
+        <input type="password" class="form-control" id="Usuario_Contrasena" name="Usuario_Contrasena"
+          asp-for="Usuario_Contrasena" required />
+        <span asp-validation-for="Usuario_Contrasena" class="text-danger"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</div>
+
+
+@section Scripts {
+  @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+  }
+}

@@ -1,15 +1,26 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Npgsql.EntityFrameworkCore;
 using proyecto_caldas.Data;
+using proyecto_caldas.Data.Services;
+using proyecto_caldas.Implementation;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration
 .GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<DBContext>(options => options.UseNpgsql(connectionString));
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddScoped<IUsuarioservice, UsuarioService>();
+
+builder.Services.AddScoped<IPaswordServicio, PaswordServicio>();
+
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

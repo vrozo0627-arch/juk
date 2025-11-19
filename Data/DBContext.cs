@@ -11,12 +11,12 @@ namespace proyecto_caldas.Data
     public class DBContext : DbContext
     {
         public DBContext(DbContextOptions<DBContext> options) : base(options) { }
-        public DbSet<usuariomodel> Usuarios { get; set; }
+        public DbSet<Usuariomodel> Usuarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<usuariomodel>().HasKey(U => U.Usuario_Id);
-            modelBuilder.Entity<usuariomodel>().Property(U => U.Usuario_Id).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Usuariomodel>().HasKey(U => U.Usuario_Id);
+            modelBuilder.Entity<Usuariomodel>().Property(U => U.Usuario_Id).ValueGeneratedOnAdd();
 
         }
     }
