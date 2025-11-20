@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("proyecto_caldas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddaf2a1d1cffb9ca95e4c31839a9a258dd4e3c5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+161a394acb95173fa96e4a94c964cbfd2cb101ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("proyecto_caldas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("proyecto_caldas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

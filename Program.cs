@@ -14,10 +14,11 @@ builder.Services.AddDbContext<DBContext>(options => options.UseNpgsql(connection
 builder.Services.AddControllersWithViews();
 
 
+
 builder.Services.AddScoped<IUsuarioservice, UsuarioService>();
 
 builder.Services.AddScoped<IPaswordServicio, PaswordServicio>();
-
+builder.Services.AddScoped<LoginServicio, LoginServicio>();
 
 var app = builder.Build();
 

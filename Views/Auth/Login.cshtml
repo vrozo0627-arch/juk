@@ -1,15 +1,24 @@
-<div class= "Container text-center w-75">
+
+
+
+@model proyecto_caldas.Models.LoginModl
+
+<div class="container text-center w-75">
     <h1>Iniciar Sesión</h1>
     <form asp-action="Login" asp-controller="Auth" method="post" class="mt-5">
-    <div class="form-group mt-5">
-<label for="Correo">Correo</label>
-<input type="email" class="form-control" id="Correo" name="Correo">
-</div>
-    <div class="form-group mt-5">
-<label for="Contrasena">Contrasena</label>
-<input type="password" class="form-control" id="Contrasena" name="Contrasena">
-    </div>
-    <button type="submit" class="btn-primary mt-5">Iniciar Sesión</button>
+        <div class="form-group mt-5">
+            <label for="Login_Correo">Correo</label>
+            <input type="email" class="form-control" id="Login_Correo" name="Login_Correo" asp-for="Login_Correo"
+                required>
+            <span asp-validation-for="Login_Correo" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-5">
+            <label for="Login_Contrasena">Contraseña</label>
+            <input type="password" class="form-control" name="Login_Contrasena" id="Login_Contrasena"
+                asp-for="Login_Contrasena" required>
+        </div>
+        <button type="submit" class="btn btn-primary mt-5">
+            Iniciar Sesión
+        </button>
     </form>
-    
 </div>
